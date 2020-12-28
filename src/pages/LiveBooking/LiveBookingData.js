@@ -27,4 +27,11 @@ export const Cards = [
     rating: "4 (10)",
     address: "9 Km",
   },
+  {
+    id: 4,
+    title: "RS Hewan Baru",
+    subtitle: "Jakarta Pusat, Jakarta",
+    rating: "4 (10)",
+    address: "9 Km",
+  },
 ];

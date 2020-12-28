@@ -6,7 +6,7 @@ import {
 } from "../../components";
 import { Cards } from "./LiveBookingData";
 
-const LayouWrapper = styled.div`
+const LayoutWrapper = styled.div`
   width: 100%;
   padding: 10px;
 `;
@@ -15,7 +15,7 @@ const LiveBooking = () => {
   return (
     <>
       <HeadersRoute title="Live Booking Online" />
-      <LayouWrapper>
+      <LayoutWrapper>
         <SearchLiveBooking />
         {Cards.map((card) => (
           <CardLiveBooking
@@ -27,7 +27,7 @@ const LiveBooking = () => {
             id={card.id}
           />
         ))}
-      </LayouWrapper>
+      </LayoutWrapper>
     </>
   );
 };

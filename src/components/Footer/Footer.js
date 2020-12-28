@@ -6,12 +6,13 @@ const FooterWrapper = styled.div`
   height: 70px;
   width: 100%;
   padding: 5px;
-  transform: translateY(29%);
+  /* background: red; */
+  /* transform: translateY(29%); */
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
-  /* border-top: 15px #efefef solid; */
 `;
 const FooterDiv = styled.div`
   display: flex;

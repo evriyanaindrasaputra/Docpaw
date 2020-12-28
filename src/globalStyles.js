@@ -16,7 +16,8 @@ export const LayoutWrapper = styled.div`
 `;
 export const Layout = styled.div`
   width: 360px;
-  height: 100vh;
+  height: 100%;
   background: #fff;
+  overflow-y: hidden;
 `;
 export default GlobalStyle;
