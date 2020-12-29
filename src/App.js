@@ -1,7 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import { Navbar } from "./components";
 import GlobalStyle, { LayoutWrapper, Layout } from "./globalStyles";
-import { DetailLiveBooking, Home, LiveBooking, ChatDokter } from "./pages";
+import {
+  DetailLiveBooking,
+  Home,
+  LiveBooking,
+  ChatDokter,
+  DetailDokter,
+} from "./pages";
 
 function App() {
   return (
@@ -25,6 +31,9 @@ function App() {
               exact
               component={DetailLiveBooking}
             />
+          </Switch>
+          <Switch>
+            <Route path="/detaildokter/:id" exact component={DetailDokter} />
           </Switch>
         </Layout>
       </LayoutWrapper>

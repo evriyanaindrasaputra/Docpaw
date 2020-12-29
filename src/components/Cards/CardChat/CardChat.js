@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Avatar } from "../../../components";
 import { FaCalendar, FaStar, FaBriefcase } from "react-icons/fa";
 
@@ -35,8 +36,9 @@ const CardDesc = styled.div`
 `;
 const CardDividerOnline = styled.div`
   width: 100%;
-  height: 1px;
-  background-color: #e0e0;
+  height: 2px;
+  background: #e0e0e0;
+  margin: 5px 0;
 `;
 const CardDividerOffline = styled.div`
   width: 100%;
@@ -45,6 +47,7 @@ const CardDividerOffline = styled.div`
   text-align: center;
   border-radius: 5px;
   padding: 2px;
+  margin: 5px 0;
   p {
     font-size: 10px;
   }
@@ -60,19 +63,30 @@ const CardActions = styled.div`
   color: #999;
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
   border-radius: 5px;
   /* border: none; */
   outline: none;
-  padding: 5px 10px;
+  padding: 5px 5px;
   /* background: #4fc1f7; */
   background: ${({ isOnline }) => (isOnline ? "#4fc1f7" : "white")};
   color: ${({ isOnline }) => (isOnline ? "white" : "red")};
   border: ${({ isOnline }) => (isOnline ? "none" : "1px solid red")};
   text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
 `;
 
-const CardChat = ({ isOnline, image, name, price, voucher }) => {
+const CardChat = ({
+  id,
+  isOnline,
+  image,
+  name,
+  price,
+  voucher,
+  rating,
+  description,
+}) => {
   return (
     <CardWrapper>
       <CardContent>
@@ -101,15 +115,18 @@ const CardChat = ({ isOnline, image, name, price, voucher }) => {
       <CardActions>
         <div>
           <p>
-            <FaStar style={{ color: "#FFC107", marginRight: "3px" }} />5 (75)
+            <FaStar style={{ color: "#FFC107", marginRight: "3px" }} /> {rating}
           </p>
         </div>
         <div>
           <p>
-            <FaBriefcase style={{ marginRight: "3px" }} />3 Tahun
+            <FaBriefcase style={{ marginRight: "3px" }} />
+            {description}
           </p>
         </div>
-        <Button isOnline={isOnline}>Chat</Button>
+        <Button isOnline={isOnline} to={`/detaildokter/${id}`}>
+          {isOnline ? "Chat" : "Ingatkan Saya"}
+        </Button>
       </CardActions>
     </CardWrapper>
   );

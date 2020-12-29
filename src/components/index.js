@@ -11,3 +11,4 @@ export { default as Avatar } from "./Avatar/Avatar";
 export { default as CardPhone } from "./Cards/CardPhone/CardPhone";
 export { default as CardDropdown } from "./Cards/CardDropdown/CardDropdown";
 export { default as CardChat } from "./Cards/CardChat/CardChat";
+export { default as CardDetailDokter } from "./Cards/CardDetailDokter/CardDetailDokter";

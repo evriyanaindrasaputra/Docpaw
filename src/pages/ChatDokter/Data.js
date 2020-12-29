@@ -1,5 +1,6 @@
 export const DataDokter = [
   {
+    id: 1,
     name: "Drh. Sri Indah Astuti",
     price: 25000,
     image:
@@ -10,6 +11,7 @@ export const DataDokter = [
     voucher: true,
   },
   {
+    id: 2,
     name: "Drh. Safitri",
     price: 25000,
     image:
@@ -20,6 +22,7 @@ export const DataDokter = [
     voucher: true,
   },
   {
+    id: 3,
     name: "Drh. Adellyna Chrissandra",
     price: 25000,
     image:
@@ -30,6 +33,7 @@ export const DataDokter = [
     voucher: true,
   },
   {
+    id: 4,
     name: "Drh. Tri Ari Widiastuti",
     price: 50000,
     image:
@@ -40,6 +44,7 @@ export const DataDokter = [
     voucher: false,
   },
   {
+    id: 5,
     name: "Drh. Putri Mega",
     price: 50000,
     image:
@@ -50,6 +55,7 @@ export const DataDokter = [
     voucher: false,
   },
   {
+    id: 6,
     name: "Drh. Putri Mega",
     price: 50000,
     image:

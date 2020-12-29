@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const AvatarWrapper = styled.div`
-  width: 54px;
-  height: 54px;
+  /* width: 54px; */
+  width: ${({ Big }) => (Big ? "125px" : "54px")};
+  height: ${({ Big }) => (Big ? "125px" : "54px")};
+  /* height: 54px; */
   border-radius: 50%;
   /* padding: 1px; */
   overflow: hidden;
@@ -17,17 +19,19 @@ const Image = styled.img`
 
 const Status = styled.div`
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: ${({ Big }) => (Big ? "25px" : "10px")};
+  height: ${({ Big }) => (Big ? "25px" : "10px")};
+  /* width: 10px; */
+  /* height: 10px; */
   background: ${({ isOnline }) => (isOnline ? "#00E092" : "#FD0000")};
   border-radius: 50%;
   bottom: 5%;
   right: 25%;
 `;
 
-const Avatar = ({ image, isOnline }) => {
+const Avatar = ({ image, isOnline, Big }) => {
   return (
-    <AvatarWrapper>
+    <AvatarWrapper Big={Big}>
       <Image src={image} alt={image} />
       <Status isOnline={isOnline} />
     </AvatarWrapper>

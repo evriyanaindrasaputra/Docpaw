@@ -8,7 +8,6 @@ const LayoutWrapper = styled.div`
   width: 100%;
   padding: 10px;
   background: #fff;
-  height: 83.8vh;
 `;
 const Desc = styled.div`
   padding: 10px;
@@ -36,19 +35,21 @@ const Button = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
+  /* transform: translateY(200%); */
 `;
 
 const DetailLiveBooking = () => {
   const { id } = useParams();
-  const selected = Cards[Number(id) - 1];
+  // const selected = Cards[Number(id) - 1];
+  const selected = Cards.filter((card) => card.id === Number(id));
   return (
     <>
-      <HeadersRoute title={selected.title} />
+      <HeadersRoute title={selected[0].title} />
       <LayoutWrapper>
-        <Image src={selected.title} title={selected.title} />
+        <Image src={selected[0].title} title={selected[0].title} />
         <Desc>
-          <h3>{selected.title}</h3>
-          <p>{selected.subtitle}</p>
+          <h3>{selected[0].title}</h3>
+          <p>{selected[0].subtitle}</p>
         </Desc>
         <CardPhone />
         <CardDropdown />

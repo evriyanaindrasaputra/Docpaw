@@ -13,9 +13,11 @@ export const LayoutWrapper = styled.div`
   display: flex;
   background: #efefef;
   justify-content: center;
+  height: 100%;
 `;
 export const Layout = styled.div`
   width: 360px;
+  min-height: 100vh;
   height: 100%;
   background: #fff;
   overflow-y: hidden;
