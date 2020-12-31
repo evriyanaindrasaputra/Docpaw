@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Avatar } from "../../../components";
 import { FaStar, FaBriefcase } from "react-icons/fa";
@@ -75,6 +76,21 @@ const HeroBuy = styled.div`
   font-size: 10px;
   flex-wrap: wrap;
 `;
+const Button = styled(Link)`
+  margin-top: 10px;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  background: #4fc1f7;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  width: 120px;
+`;
 
 const CardDetailDokter = ({
   image,
@@ -84,6 +100,7 @@ const CardDetailDokter = ({
   price,
   rating,
   description,
+  id,
 }) => {
   return (
     <HeroWrapper>
@@ -142,6 +159,7 @@ const CardDetailDokter = ({
         <div style={{ width: "75%" }}>biaya sesi konsultasi 30 menit</div>
         <div style={{ width: "25%", textAlign: "right" }}>{price}</div>
       </HeroBuy>
+      <Button to={`/connecting/${id}`}>konfirmasi</Button>
     </HeroWrapper>
   );
 };

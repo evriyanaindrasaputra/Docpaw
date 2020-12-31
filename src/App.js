@@ -7,6 +7,7 @@ import {
   LiveBooking,
   ChatDokter,
   DetailDokter,
+  Connecting,
 } from "./pages";
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
           </Switch>
           <Switch>
             <Route path="/chatdokter" exact component={ChatDokter} />
+          </Switch>
+          <Switch>
+            <Route path="/connecting/:id" exact component={Connecting} />
           </Switch>
           <Switch>
             <Route
