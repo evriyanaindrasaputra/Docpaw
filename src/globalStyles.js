@@ -22,4 +22,17 @@ export const Layout = styled.div`
   background: #fff;
   overflow-y: hidden;
 `;
+export const Divider = styled.div`
+  width: 100%;
+  height: 2px;
+  background: #e0e0e0;
+  margin: 5px 0;
+`;
+export const LayoutPageWrapper = styled.div`
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  height: 100%;
+  overflow-y: auto;
+`;
 export default GlobalStyle;

@@ -8,6 +8,7 @@ import {
   ChatDokter,
   DetailDokter,
   Connecting,
+  ChooseDay,
 } from "./pages";
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
           </Switch>
           <Switch>
             <Route path="/chatdokter" exact component={ChatDokter} />
+          </Switch>
+          <Switch>
+            <Route path="/pilihhari" exact component={ChooseDay} />
           </Switch>
           <Switch>
             <Route path="/connecting/:id" exact component={Connecting} />
