@@ -9,6 +9,7 @@ import {
   DetailDokter,
   Connecting,
   ChooseDay,
+  AntrianAnda,
 } from "./pages";
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
           </Switch>
           <Switch>
             <Route path="/pilihhari" exact component={ChooseDay} />
+          </Switch>
+          <Switch>
+            <Route path="/antrian" exact component={AntrianAnda} />
           </Switch>
           <Switch>
             <Route path="/connecting/:id" exact component={Connecting} />

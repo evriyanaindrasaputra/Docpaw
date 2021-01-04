@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { CardDropdown, CardPhone, HeadersRoute } from "../../components";
+import { Link } from "react-router-dom";
 import { Image } from "../../components";
 import styled from "styled-components";
 import { Cards } from "../LiveBooking/LiveBookingData";
@@ -21,7 +22,7 @@ const Desc = styled.div`
     color: #999;
   }
 `;
-const Button = styled.button`
+const Button = styled(Link)`
   width: 100%;
   padding: 8px;
   border-radius: 10px;
@@ -53,7 +54,7 @@ const DetailLiveBooking = () => {
         </Desc>
         <CardPhone />
         <CardDropdown />
-        <Button>Booking Antrian</Button>
+        <Button to="/pilihhari">Booking Antrian</Button>
       </LayoutWrapper>
     </>
   );
