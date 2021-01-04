@@ -22,11 +22,14 @@ const SearchBar = styled.input.attrs({
   margin-left: 5px;
 `;
 
-const SearchLiveBooking = () => {
+const SearchLiveBooking = ({ filterHospitals }) => {
   return (
     <SearchWrapper>
       <FaSearch />
-      <SearchBar placeholder="Cari Klinik Hewan di Sekitar Anda" />
+      <SearchBar
+        placeholder="Cari Klinik Hewan di Sekitar Anda"
+        onChange={(e) => filterHospitals(e)}
+      />
     </SearchWrapper>
   );
 };

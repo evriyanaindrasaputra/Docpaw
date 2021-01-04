@@ -98,7 +98,7 @@ const UserSaldo = styled.p`
   font-weight: 600;
   line-height: 20px;
 `;
-const TopUpBtn = styled.button`
+const TopUpBtn = styled(Link)`
   background: #6bcfff;
   color: #fff;
   font-size: 18px;
@@ -130,7 +130,7 @@ const HeaderHome = () => {
             <UserSaldoInfo>Saldo</UserSaldoInfo>
             <UserSaldo>RP 100.000</UserSaldo>
           </div>
-          <TopUpBtn>Top Up</TopUpBtn>
+          <TopUpBtn to="/pembayaran">Top Up</TopUpBtn>
         </UserSaldoWrapper>
       </UserInfoWrapper>
     </Headewrap>

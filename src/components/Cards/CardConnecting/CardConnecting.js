@@ -34,7 +34,7 @@ const CardConnecting = ({ image, isOnline, name }) => {
       counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
     return () => clearInterval(timer);
   }, [counter]);
-  if (counter === 0) history.push("/");
+  if (counter === 0) history.push("/antrian");
   return (
     <>
       <LayoutWrapper>

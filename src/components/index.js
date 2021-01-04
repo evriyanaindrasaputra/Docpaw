@@ -14,4 +14,5 @@ export { default as CardChat } from "./Cards/CardChat/CardChat";
 export { default as CardDetailDokter } from "./Cards/CardDetailDokter/CardDetailDokter";
 export { default as CardConnecting } from "./Cards/CardConnecting/CardConnecting";
 export { default as CardAntrian } from "./Cards/CardAntrian/CardAntrian";
+export { default as CardPembayaran } from "./Cards/CardPembayaran/CardPembayaran";
 export { default as Divider } from "./Divider/Divider";

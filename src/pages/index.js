@@ -6,3 +6,4 @@ export { default as DetailDokter } from "./DetailDokter/DetailDokter";
 export { default as Connecting } from "./Connecting/Connecting";
 export { default as ChooseDay } from "./ChooseDay/ChooseDay";
 export { default as AntrianAnda } from "./AntrianAnda/AntrianAnda";
+export { default as Pembayaran } from "./Pembayaran/Pembayaran";

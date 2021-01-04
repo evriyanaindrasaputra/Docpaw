@@ -10,6 +10,7 @@ import {
   Connecting,
   ChooseDay,
   AntrianAnda,
+  Pembayaran,
 } from "./pages";
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           </Switch>
           <Switch>
             <Route path="/antrian" exact component={AntrianAnda} />
+          </Switch>
+          <Switch>
+            <Route path="/pembayaran" exact component={Pembayaran} />
           </Switch>
           <Switch>
             <Route path="/connecting/:id" exact component={Connecting} />

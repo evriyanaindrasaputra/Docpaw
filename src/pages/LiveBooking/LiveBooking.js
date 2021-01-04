@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import {
   CardLiveBooking,
@@ -12,12 +13,25 @@ const LayoutWrapper = styled.div`
 `;
 
 const LiveBooking = () => {
+  const [hospitals, setHospitals] = useState(Cards);
+  const filterHospitals = (e) => {
+    if (e.target.value === "") {
+      setHospitals(Cards);
+    } else {
+      setHospitals(
+        Cards.filter((card) =>
+          card.title.toLowerCase().includes(e.target.value.toLowerCase())
+        )
+      );
+    }
+  };
+
   return (
     <>
       <HeadersRoute title="Live Booking Online" />
       <LayoutWrapper>
-        <SearchLiveBooking />
-        {Cards.map((card) => (
+        <SearchLiveBooking filterHospitals={filterHospitals} />
+        {hospitals.map((card) => (
           <CardLiveBooking
             key={card.id}
             title={card.title}
