@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaPaw, FaFileAlt, FaUserAlt } from "react-icons/fa";
 
 const FooterWrapper = styled.div`
-  height: 70px;
+  height: 50px;
   width: 100%;
   padding: 5px;
   /* background: red; */

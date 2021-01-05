@@ -7,6 +7,8 @@ import { Cards } from "../LiveBooking/LiveBookingData";
 
 const LayoutWrapper = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   background: #fff;
 `;
@@ -22,7 +24,12 @@ const Desc = styled.div`
     color: #999;
   }
 `;
+const CardWrapper = styled.div`
+  display: block;
+  height: 250px;
+`;
 const Button = styled(Link)`
+  text-align: center;
   width: 100%;
   padding: 8px;
   border-radius: 10px;
@@ -35,8 +42,8 @@ const Button = styled(Link)`
   text-transform: uppercase;
   border: none;
   outline: none;
+  text-decoration: none;
   cursor: pointer;
-  /* transform: translateY(200%); */
 `;
 
 const DetailLiveBooking = () => {
@@ -52,8 +59,10 @@ const DetailLiveBooking = () => {
           <h3>{selected[0].title}</h3>
           <p>{selected[0].subtitle}</p>
         </Desc>
-        <CardPhone />
-        <CardDropdown />
+        <CardWrapper>
+          <CardPhone />
+          <CardDropdown />
+        </CardWrapper>
         <Button to="/pilihhari">Booking Antrian</Button>
       </LayoutWrapper>
     </>

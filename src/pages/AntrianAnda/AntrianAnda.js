@@ -12,9 +12,11 @@ const Pembayaran = styled.div`
   color: #53565a;
   font-size: 10px;
   flex-wrap: wrap;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 40px 0;
 `;
 const Button = styled(Link)`
+  display: block;
+  margin: 0 auto;
   text-align: center;
   border-radius: 5px;
   border: none;
@@ -47,9 +49,7 @@ const AntrianAnda = () => {
           <div style={{ width: "75%" }}>Total Pembayaran </div>
           <div style={{ width: "25%", textAlign: "right" }}>Rp 50.000</div>
         </Pembayaran>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Button to="/">Konfirmasi</Button>
-        </div>
+        <Button to="/pembayaran">Konfirmasi</Button>
       </LayoutPageWrapper>
     </>
   );

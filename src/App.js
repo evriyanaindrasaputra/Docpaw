@@ -11,6 +11,7 @@ import {
   ChooseDay,
   AntrianAnda,
   Pembayaran,
+  Rating,
 } from "./pages";
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
           </Switch>
           <Switch>
             <Route path="/connecting/:id" exact component={Connecting} />
+          </Switch>
+          <Switch>
+            <Route path="/rating/:id" exact component={Rating} />
           </Switch>
           <Switch>
             <Route

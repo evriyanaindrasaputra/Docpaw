@@ -71,6 +71,9 @@ const UserInfoWrapper = styled.div`
   position: absolute;
   top: 148px;
   padding: 10px 5px 10px 23px;
+  /* @media screen and (max-width: 360px) {
+    width: 93%;
+  } */
 `;
 
 const UserInfoHeading = styled.p`

@@ -20,7 +20,10 @@ export const Layout = styled.div`
   min-height: 100vh;
   height: 100%;
   background: #fff;
-  overflow-y: hidden;
+
+  @media screen and (max-width: 360px) {
+    width: 100%;
+  }
 `;
 export const Divider = styled.div`
   width: 100%;

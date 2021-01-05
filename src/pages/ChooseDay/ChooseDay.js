@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Calendar from "react-calendar";
 import { HeadersRoute, Divider } from "../../components";
 import { LayoutPageWrapper } from "../../globalStyles";
-import "react-calendar/dist/Calendar.css";
+import "./ChooseDay.css";
 
 const ButtonWrapper = styled.div`
   margin: 10px auto;
@@ -18,6 +18,9 @@ const WrapperQueue = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 10px auto;
+  @media screen and (max-width: 360px) {
+    margin: 20px auto;
+  }
 `;
 const WrapperHour = styled.div`
   margin: 10px 0;
@@ -29,6 +32,9 @@ const WrapperHour = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 360px) {
+    margin: 20px 0;
+  }
 `;
 const Button = styled.button`
   /* width: 60px; */

@@ -26,7 +26,7 @@ const CountDown = styled.div`
   font-weight: 500;
 `;
 
-const CardConnecting = ({ image, isOnline, name }) => {
+const CardConnecting = ({ image, isOnline, name, id }) => {
   const [counter, setCounter] = useState(30);
   const history = useHistory();
   useEffect(() => {
@@ -34,13 +34,12 @@ const CardConnecting = ({ image, isOnline, name }) => {
       counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
     return () => clearInterval(timer);
   }, [counter]);
-  if (counter === 0) history.push("/antrian");
+  if (counter <= 1) history.push(`/antrian/${id}`);
   return (
     <>
       <LayoutWrapper>
         <div
           style={{
-            margin: "10px auto",
             justifyContent: "center",
             display: "flex",
           }}

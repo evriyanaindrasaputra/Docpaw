@@ -11,6 +11,7 @@ const AvatarWrapper = styled.div`
   overflow: hidden;
   /* border: 1px solid red; */
   position: relative;
+  display: block;
 `;
 const Image = styled.img`
   width: 100%;

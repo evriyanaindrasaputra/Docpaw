@@ -25,6 +25,19 @@ const SubHeading = styled.h3`
   line-height: 21px;
   padding: 5px;
 `;
+const Button = styled.button`
+  display: block;
+  margin: 50px auto 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  background: #4fc1f7;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+`;
 const Pembayaran = () => {
   return (
     <>
@@ -39,6 +52,7 @@ const Pembayaran = () => {
         <CardPembayaran title="Kartu Debit" />
         <CardPembayaran title="ATM" />
         <CardPembayaran title="Internet / Mobile Banking" />
+        <Button>Bayar Sekarang</Button>
       </LayoutPageWrapper>
     </>
   );
